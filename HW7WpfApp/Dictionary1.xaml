@@ -1,0 +1,16 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:col="clr-namespace:System.Collections;assembly=mscorlib"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+    <!--<TextBlock Text="Arial" x:Key="arial"/>
+    <TextBlock Text="Times New Roman" x:Key="times"/>
+    <TextBlock Text="Verdana" x:Key="verdana"/>-->
+    <!--<TextBlock Text="12" x:Key="12"/>
+    <TextBlock Text="14" x:Key="14"/>
+    <TextBlock Text="16" x:Key="16"/>-->
+    <col:ArrayList x:Key="fonts">
+        <sys:String>Arial</sys:String>
+        <sys:String>Times New Roman</sys:String>
+        <sys:String>Verdana</sys:String> 
+    </col:ArrayList>
+</ResourceDictionary>
