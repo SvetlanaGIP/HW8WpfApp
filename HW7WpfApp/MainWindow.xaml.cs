@@ -24,7 +24,25 @@ namespace HW7WpfApp
         public MainWindow()
         {
            InitializeComponent();
+           /* List<string> styles = new List<string>() { "Light theme", "Dark theme" };
+            styleBox.ItemsSource = styles;
+            styleBox.SelectionChanged += ThemeChange;
+            styleBox.SelectedIndex = 0;*/
+
         }
+
+        /*private void ThemeChange(object sender, SelectionChangedEventArgs e)
+        {
+            int styleIndex = styleBox.SelectedIndex;
+            Uri uri = new Uri("Light.xaml", UriKind.Relative);
+            if (styleIndex == 1)
+            {
+                uri = new Uri("Dark.xaml", UriKind.Relative);
+            }
+            ResourceDictionary resource = Application.LoadComponent(uri) as ResourceDictionary;
+            Application.Current.Resources.Clear();
+            Application.Current.Resources.MergedDictionaries.Add(resource);
+        }*/
 
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
@@ -40,7 +58,7 @@ namespace HW7WpfApp
 
             if (textBox != null)
             {
-                double fontSize = Convert.ToDouble(((sender as ComboBox).SelectedItem as TextBlock).Text);
+                double fontSize = Convert.ToDouble((sender as ComboBox).SelectedItem);
                 textBox.FontSize = fontSize;
             }
         }
@@ -99,7 +117,13 @@ namespace HW7WpfApp
             }
         }
 
-        
+        private void styleBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Application.Current.Resources.MergedDictionaries.Clear();
+            Uri uri = new Uri(styleBox.SelectedIndex == 0 ? "Light.xaml" : "Dark.xaml", UriKind.Relative);
+            ResourceDictionary themeDict = Application.LoadComponent(uri) as ResourceDictionary;
+            Application.Current.Resources.MergedDictionaries.Add(themeDict);
+        }
     }
 }
 

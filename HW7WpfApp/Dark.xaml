@@ -1,0 +1,49 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <!--<Style x:Key="WindowStyle">
+        <Setter Property="Control.Background" Value="Gray"/>
+    </Style>
+    <Style x:Key="MenuStyle" >
+        <Setter Property="Menu.Background" Value="DarkGray"/>
+        <Setter Property="Menu.Foreground" Value="White"/>
+    </Style>
+    
+    <Style x:Key="ToolBarStyle" >
+        <Setter Property="ToolBar.Background" Value="DarkBlue"/>
+        <Setter Property="ToolBar.Foreground" Value="White"/>
+        <Setter Property="ToolBar.BorderBrush" Value="White"/>
+    </Style>
+    
+    <Style x:Key="TxtBoxStyle" BasedOn="{StaticResource WindowStyle}">
+        <Setter Property="TextBlock.Foreground" Value="White"/>
+        <Setter Property="TextBlock.Padding" Value="10"/>
+    </Style>-->
+    <SolidColorBrush x:Key="bg" Color="Gray"/>
+    <SolidColorBrush x:Key="cfront" Color="White"/>
+    <Style TargetType="TextBox">
+        <Setter Property="Background" Value="{StaticResource bg}"/>
+        <Setter Property="Foreground" Value="{StaticResource cfront}"/>
+    </Style>
+    <Style TargetType="ToolBarTray">
+        <Setter Property="Background" Value="{StaticResource bg}"/>
+    </Style>
+    <Style TargetType="ToolBar">
+        <Setter Property="Background" Value="{StaticResource bg}"/>
+    </Style>
+    <Style TargetType="Menu">
+        <Setter Property="Background" Value="{StaticResource bg}"/>
+        <Setter Property="Foreground" Value="{StaticResource cfront}"/>
+    </Style>
+    <Style TargetType="MenuItem">
+        <Setter Property="Background" Value="{StaticResource bg}"/>
+        <Setter Property="Foreground" Value="{StaticResource cfront}"/>
+    </Style>
+    <Style TargetType="ComboBox">
+        <Setter Property="Background" Value="{StaticResource bg}"/>
+        <Setter Property="Foreground" Value="{StaticResource cfront}"/>
+    </Style>
+    <Style TargetType="ComboBoxItem">
+        <Setter Property="Background" Value="{StaticResource bg}"/>
+        <Setter Property="Foreground" Value="{StaticResource cfront}"/>
+    </Style>
+</ResourceDictionary>
