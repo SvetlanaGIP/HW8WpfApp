@@ -123,6 +123,9 @@ namespace HW7WpfApp
             Uri uri = new Uri(styleBox.SelectedIndex == 0 ? "Light.xaml" : "Dark.xaml", UriKind.Relative);
             ResourceDictionary themeDict = Application.LoadComponent(uri) as ResourceDictionary;
             Application.Current.Resources.MergedDictionaries.Add(themeDict);
+            Uri uri2 = new Uri("Dictionary1.xaml", UriKind.Relative);
+            ResourceDictionary themeDict2 = Application.LoadComponent(uri2) as ResourceDictionary;
+            Application.Current.Resources.MergedDictionaries.Add(themeDict2);
         }
     }
 }
